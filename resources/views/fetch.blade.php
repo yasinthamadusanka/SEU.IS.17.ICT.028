@@ -15,6 +15,7 @@
             <th>Telephone No</th>
             <th>NIC No</th>
             <th>Gender</th>
+            <th colspan="2">Actions</th>
         </tr>
         @foreach ($detail as $x)
         <tr>
@@ -24,6 +25,8 @@
             <td>{{$x['phonenumber']}}</td>
             <td>{{$x['nic']}}</td>
             <td>{{$x['gender']}}</td>
+            <td><a href={{"edit/".$x['id']}}>Edit</a></td>
+            <td><a href={{"delete/".$x['id']}}>Delete</a></td>
         </tr>
         @endforeach
 

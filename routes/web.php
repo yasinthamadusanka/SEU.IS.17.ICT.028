@@ -20,6 +20,14 @@ Route::get('/', function () {
 
 Route::view('form', 'form');
 
+Route::view('fetch', 'fetch');
+
 Route::post('check', [FormController::class,'getdata']);
 
 Route::get('fetchdata', [FormController::class,'fetchdata']);
+
+Route::get('edit/{id}',[FormController::class,'edit']);
+
+Route::post('/update',[FormController::class,'update']);
+
+Route::get('delete/{id}',[FormController::class,'delete']);
